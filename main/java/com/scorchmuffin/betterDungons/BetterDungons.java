@@ -21,13 +21,16 @@ public class BetterDungons {
 	public static BetterDungons instance;
 
 	private static final TestItem TEST_ITEM = new TestItem();
+	private static final Tansinite CRYSTAL1 = new Tansinite();
 
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
 
 		TEST_ITEM.setUnlocalizedName(TestItem.NAME).setCreativeTab(tabBetterDungons);
+		CRYSTAL1.setUnlocalizedName(Tansinite.NAME).setCreativeTab(tabBetterDungons);
 		GameRegistry.registerItem(TEST_ITEM, TestItem.NAME);
-
+		GameRegistry.registerItem(CRYSTAL1, Tansinite.NAME);
+		
 		/*
 		 * Item/Block init and registering, plus Config handling
 		 */
