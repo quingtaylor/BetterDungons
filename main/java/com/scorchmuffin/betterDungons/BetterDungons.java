@@ -14,9 +14,11 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 
 @Mod(modid = BetterDungons.MODID, version = BetterDungons.VERSION, name = BetterDungons.NAME)
 public class BetterDungons {
+
 	public static final String NAME = "Better Dungons";
 	public static final String MODID = "BD";
 	public static final String VERSION = "0.0.1";
+
 	@Mod.Instance(MODID)
 	public static BetterDungons instance;
 
@@ -30,7 +32,7 @@ public class BetterDungons {
 		CRYSTAL1.setUnlocalizedName(Tansinite.NAME).setCreativeTab(tabBetterDungons);
 		GameRegistry.registerItem(TEST_ITEM, TestItem.NAME);
 		GameRegistry.registerItem(CRYSTAL1, Tansinite.NAME);
-		
+
 		/*
 		 * Item/Block init and registering, plus Config handling
 		 */
