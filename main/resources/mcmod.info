@@ -1,0 +1,16 @@
+[
+{
+  "modid": "BD",
+  "name": "Better Dungons",
+  "description": "",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["scorchmuffin"],
+  "credits": "",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
