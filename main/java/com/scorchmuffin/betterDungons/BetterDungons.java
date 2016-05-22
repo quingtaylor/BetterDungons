@@ -27,7 +27,8 @@ public class BetterDungons {
 
 	private static ArmorMaterial TANSINITEARMOR = EnumHelper.addArmorMaterial("TansiniteArmorMaterial",
 			MODID + ":TansiniteArmor", 35, new int[] { 5, 10, 8, 3 }, 25);
-	private static ToolMaterial TANSINITETOOL = EnumHelper.addToolMaterial("TansiniteToolMaterial", 5, 2000, 10, 10, 25);
+	private static ToolMaterial TANSINITETOOL = EnumHelper.addToolMaterial("TansiniteToolMaterial", 5, 2000, 10, 10,
+			25);
 
 	private static final TestItem TEST_ITEM = new TestItem();
 	private static final Tansinite CRYSTAL1 = new Tansinite();
@@ -61,10 +62,14 @@ public class BetterDungons {
 	@EventHandler
 	public void init(FMLInitializationEvent event) {
 		GameRegistry.addRecipe(new ItemStack(TEST_ITEM), new Object[] { "D D", " D ", "   ", 'D', Blocks.dirt });
-		GameRegistry.addRecipe(new ItemStack(CRYSTALARMOR1), new Object[]{ "TTT", "T T", "   ", 'T', BetterDungons.CRYSTAL1});
-		GameRegistry.addRecipe(new ItemStack(CRYSTALARMOR2), new Object[]{ "T T", "TTT", "TTT", 'T', BetterDungons.CRYSTAL1});
-		GameRegistry.addRecipe(new ItemStack(CRYSTALARMOR3), new Object[]{ "TTT", "T T", "T T", 'T', BetterDungons.CRYSTAL1});
-		GameRegistry.addRecipe(new ItemStack(CRYSTALARMOR4), new Object[]{ "   ", "T T", "T T", 'T', BetterDungons.CRYSTAL1});
+		GameRegistry.addRecipe(new ItemStack(CRYSTALARMOR1),
+				new Object[] { "TTT", "T T", "   ", 'T', BetterDungons.CRYSTAL1 });
+		GameRegistry.addRecipe(new ItemStack(CRYSTALARMOR2),
+				new Object[] { "T T", "TTT", "TTT", 'T', BetterDungons.CRYSTAL1 });
+		GameRegistry.addRecipe(new ItemStack(CRYSTALARMOR3),
+				new Object[] { "TTT", "T T", "T T", 'T', BetterDungons.CRYSTAL1 });
+		GameRegistry.addRecipe(new ItemStack(CRYSTALARMOR4),
+				new Object[] { "   ", "T T", "T T", 'T', BetterDungons.CRYSTAL1 });
 
 	}
 
