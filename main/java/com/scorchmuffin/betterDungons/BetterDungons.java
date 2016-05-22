@@ -6,6 +6,7 @@ import net.minecraft.init.Items;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemArmor.ArmorMaterial;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.Item.ToolMaterial;
 import net.minecraftforge.common.util.EnumHelper;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
@@ -26,6 +27,7 @@ public class BetterDungons {
 
 	private static ArmorMaterial TANSINITEARMOR = EnumHelper.addArmorMaterial("TansiniteArmorMaterial",
 			MODID + ":TansiniteArmor", 35, new int[] { 5, 10, 8, 3 }, 25);
+	private static ToolMaterial TANSINITETOOL = EnumHelper.addToolMaterial("TansiniteToolMaterial", 5, 2000, 10, 10, 25);
 
 	private static final TestItem TEST_ITEM = new TestItem();
 	private static final Tansinite CRYSTAL1 = new Tansinite();
@@ -33,6 +35,7 @@ public class BetterDungons {
 	private static final TansiniteChestplate CRYSTALARMOR2 = new TansiniteChestplate(TANSINITEARMOR, 0, 1);
 	private static final TansiniteLegs CRYSTALARMOR3 = new TansiniteLegs(TANSINITEARMOR, 0, 2);
 	private static final TansiniteBoots CRYSTALARMOR4 = new TansiniteBoots(TANSINITEARMOR, 0, 3);
+	private static final TansiniteSword CRYSTALSWORD1 = new TansiniteSword(TANSINITETOOL);
 
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
