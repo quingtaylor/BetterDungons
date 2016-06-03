@@ -4,9 +4,9 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.init.Blocks;
 import net.minecraft.init.Items;
 import net.minecraft.item.Item;
+import net.minecraft.item.Item.ToolMaterial;
 import net.minecraft.item.ItemArmor.ArmorMaterial;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.Item.ToolMaterial;
 import net.minecraftforge.common.util.EnumHelper;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.common.Mod.EventHandler;
@@ -37,7 +37,11 @@ public class BetterDungons {
 	private static final TansiniteLegs CRYSTALARMOR3 = new TansiniteLegs(TANSINITEARMOR, 0, 2);
 	private static final TansiniteBoots CRYSTALARMOR4 = new TansiniteBoots(TANSINITEARMOR, 0, 3);
 	private static final TansiniteSword CRYSTALSWORD1 = new TansiniteSword(TANSINITETOOL);
-
+	private static final TansinitePick CRYSTALPICK1 = new TansinitePick(TANSINITETOOL);
+	private static final TansiniteSpade CRYSTALSPADE1 = new TansiniteSpade(TANSINITETOOL);
+	private static final TansiniteHoe CRYSTALHOE1 = new TansiniteHoe(TANSINITETOOL);
+	private static final TansiniteAxe CRYSTALAXE1 = new TansiniteAxe(TANSINITETOOL);
+	
 	@EventHandler
 	public void preInit(FMLPreInitializationEvent event) {
 
@@ -47,12 +51,22 @@ public class BetterDungons {
 		CRYSTALARMOR2.setUnlocalizedName(TansiniteChestplate.NAME).setCreativeTab(tabBetterDungons);
 		CRYSTALARMOR3.setUnlocalizedName(TansiniteLegs.NAME).setCreativeTab(tabBetterDungons);
 		CRYSTALARMOR4.setUnlocalizedName(TansiniteBoots.NAME).setCreativeTab(tabBetterDungons);
+		CRYSTALSWORD1.setUnlocalizedName(TansiniteSword.NAME).setCreativeTab(tabBetterDungons);
+		CRYSTALPICK1.setUnlocalizedName(TansinitePick.NAME).setCreativeTab(tabBetterDungons);
+		CRYSTALSPADE1.setUnlocalizedName(TansiniteSpade.NAME).setCreativeTab(tabBetterDungons);
+		CRYSTALHOE1.setUnlocalizedName(TansiniteHoe.NAME).setCreativeTab(tabBetterDungons);
+		CRYSTALAXE1.setUnlocalizedName(TansiniteAxe.NAME).setCreativeTab(tabBetterDungons);
 		GameRegistry.registerItem(TEST_ITEM, TestItem.NAME);
 		GameRegistry.registerItem(CRYSTAL1, Tansinite.NAME);
 		GameRegistry.registerItem(CRYSTALARMOR1, TansiniteHelm.NAME);
 		GameRegistry.registerItem(CRYSTALARMOR2, TansiniteChestplate.NAME);
 		GameRegistry.registerItem(CRYSTALARMOR3, TansiniteLegs.NAME);
 		GameRegistry.registerItem(CRYSTALARMOR4, TansiniteBoots.NAME);
+		GameRegistry.registerItem(CRYSTALSWORD1, TansiniteSword.NAME);
+		GameRegistry.registerItem(CRYSTALPICK1, TansinitePick.NAME);
+		GameRegistry.registerItem(CRYSTALSPADE1, TansiniteSpade.NAME);
+		GameRegistry.registerItem(CRYSTALHOE1, TansiniteHoe.NAME);
+		GameRegistry.registerItem(CRYSTALAXE1, TansiniteAxe.NAME);
 
 		/*
 		 * Item/Block init and registering, plus Config handling
@@ -70,6 +84,20 @@ public class BetterDungons {
 				new Object[] { "TTT", "T T", "T T", 'T', BetterDungons.CRYSTAL1 });
 		GameRegistry.addRecipe(new ItemStack(CRYSTALARMOR4),
 				new Object[] { "   ", "T T", "T T", 'T', BetterDungons.CRYSTAL1 });
+		GameRegistry.addRecipe(new ItemStack(CRYSTALSWORD1),
+				new Object[] { " T ", " T ", " S ", 'T', BetterDungons.CRYSTAL1, 'S', Items.stick });
+		GameRegistry.addRecipe(new ItemStack(CRYSTALPICK1),
+				new Object[] { "TTT", " S ", " S ", 'T', BetterDungons.CRYSTAL1, 'S', Items.stick });
+		GameRegistry.addRecipe(new ItemStack(CRYSTALSPADE1),
+				new Object[] { " T ", " S ", " S ", 'T', BetterDungons.CRYSTAL1, 'S', Items.stick });
+		GameRegistry.addRecipe(new ItemStack(CRYSTALHOE1),
+				new Object[] { "TT ", " S ", " S ", 'T', BetterDungons.CRYSTAL1, 'S', Items.stick });
+		GameRegistry.addRecipe(new ItemStack(CRYSTALHOE1),
+				new Object[] { " TT", " S ", " S ", 'T', BetterDungons.CRYSTAL1, 'S', Items.stick });
+		GameRegistry.addRecipe(new ItemStack(CRYSTALAXE1),
+				new Object[] { "TT ", "TS ", " S ", 'T', BetterDungons.CRYSTAL1, 'S', Items.stick });
+		GameRegistry.addRecipe(new ItemStack(CRYSTALAXE1),
+				new Object[] { " TT", " ST", " S ", 'T', BetterDungons.CRYSTAL1, 'S', Items.stick });
 
 	}
 
